@@ -1,29 +1,4 @@
 #
-# This file was derived from the 'Hello World!' example recipe in the
-# Yocto Project Development Manual.
-#
-#
-#SUMMARY = "Simple helloworld application"
-#SECTION = "examples"
-#LICENSE = "MIT"
-#LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda2f7b4f302"
-#
-#SRC_URI = "file://helloworld.c"
-#
-#S = "${WORKDIR}"
-#
-#do_compile() {
-#	     ${CC} ${LDFLAGS} helloworld.c -o helloworld
-#}
-#
-#do_install() {
-#	     install -d ${D}${bindir}
-#	     install -m 0755 helloworld ${D}${bindir}
-#}
-#
-#
-#
-#
 # This file was derived from the 'ACTIA-QTserver' example recipe in the
 # Yocto Project Development Manual.
 #
@@ -58,10 +33,6 @@ do_compile_prepend() {
     export PKG_CONFIG="PKG_CONFIG_SYSROOT_DIR=\"${PKG_CONFIG_SYSROOT_DIR}\" pkg-config"
     export LD_FLAGS="${LD_FLAGS}"
 }
-
-#do_compile() {
-#    oe_runmake -C ${S}/ACTIA-QTserver/ all
-#}
 
 do_install() {
     install -d ${IOTIVITY_BIN_DIR_D}/apps/ACTIA-QTserver
